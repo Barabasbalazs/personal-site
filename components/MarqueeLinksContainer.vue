@@ -1,0 +1,67 @@
+<template>
+    <div class="relative flex overflow-x-hidden marquee">
+
+        <div v-for="ind in 2" :key="ind" class="whitespace-nowrap flex gap-4" :class="[
+            { 'absolute top-0': ind === 1 }, `marquee__slider${ind === 1 ? '2' : '1'}`
+        ]">
+            <a class="w-32 flex items-center justify-center" v-for="(item, index) in items" :key="index"
+                :href="item.link" target="_blank" :class="{ 'pr-4': index === items.length - 1 }">
+                <img class="w-full" :src="item.logo" alt="`logo-${item.link}`" />
+            </a>
+        </div>
+
+    </div>
+</template>
+
+<script setup lang="ts">
+import type { MarqueeLink } from '~/types/marquee-link';
+
+interface Props {
+    right: boolean
+    items: MarqueeLink[]
+}
+
+const props = withDefaults(defineProps<Props>(), { right: true });
+
+const transformPercentages = computed(() => {
+    const values = ['translateX(100%)', 'translateX(-100%)'];
+    return props.right ? values : values.reverse()
+})
+</script>
+
+<style scoped>
+.marquee__slider1 {
+    animation: marquee1 linear 15s infinite;
+}
+
+.marquee__slider2 {
+    animation: marquee2 linear 15s infinite;
+}
+
+
+.marquee:hover .marquee__slider1,
+.marquee:hover .marquee__slider2 {
+    animation-play-state: paused;
+}
+
+@keyframes marquee1 {
+    from {
+        transform: translateX(0%);
+    }
+
+    /* change these values for directional change*/
+    to {
+        transform: v-bind(transformPercentages[0]);
+    }
+}
+
+@keyframes marquee2 {
+    from {
+        transform: v-bind(transformPercentages[1]);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
+</style>
