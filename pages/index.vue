@@ -1,12 +1,12 @@
 <template>
     <div class="flex items-center justify-center w-screen h-screen flex-col">
-        <MarqueeLinksContainer v-for="(array, ind) in technologyItems" class="border-2 border-red-500 w-full"
+        <MarqueeLinksContainer v-for="(array, ind) in technologyItems" class="border-2 border-red-500 w-full "
             :items="array" :right="ind === 1" />
     </div>
 </template>
 
 <script setup lang="ts">
-import type { MarqueeLink } from '~/types/marquee-link';
+import type { LinkItem } from '~/types/link-item';
 
 const technologyItems = computed(() => {
     const values = [
@@ -82,7 +82,7 @@ const technologyItems = computed(() => {
             link: "https://vitest.dev/",
             logo: "/app/icons/vitest.svg"
         }
-    ] as MarqueeLink[];
+    ] as LinkItem[];
     const middle = Math.floor((values.length - 1) / 2);
     return [values.slice(0, middle), values.slice(middle + 1, values.length - 1)];
 });

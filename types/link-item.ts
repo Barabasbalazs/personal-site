@@ -1,4 +1,4 @@
-export type MarqueeLink = {
+export type LinkItem = {
   link: string;
   logo: string;
 };

@@ -4,8 +4,8 @@
         <div v-for="ind in 2" :key="ind" class="whitespace-nowrap flex gap-4" :class="[
             { 'absolute top-0': ind === 1 }, `marquee__slider${ind === 1 ? '2' : '1'}`
         ]">
-            <a class="w-32 flex items-center justify-center" v-for="(item, index) in items" :key="index"
-                :href="item.link" target="_blank" :class="{ 'pr-4': index === items.length - 1 }">
+            <a class="w-32 flex items-center justify-center hover:grayscale grayscale-0" v-for="(item, index) in items"
+                :key="index" :href="item.link" target="_blank" :class="{ 'pr-4': index === items.length - 1 }">
                 <img class="w-full" :src="item.logo" alt="`logo-${item.link}`" />
             </a>
         </div>
@@ -14,7 +14,7 @@
 </template>
 
 <script setup lang="ts">
-import type { MarqueeLink } from '~/types/marquee-link';
+import type { LinkItem } from '~/types/link-item';
 
 interface Props {
     right: boolean
@@ -31,11 +31,11 @@ const transformPercentages = computed(() => {
 
 <style scoped>
 .marquee__slider1 {
-    animation: marquee1 linear 15s infinite;
+    animation: marquee1 linear 20s infinite;
 }
 
 .marquee__slider2 {
-    animation: marquee2 linear 15s infinite;
+    animation: marquee2 linear 20s infinite;
 }
 
 
