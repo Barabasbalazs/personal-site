@@ -11,11 +11,12 @@
     >
       <a
         v-for="(item, index) in items"
+        :id="`link-${index}`"
         :key="index"
         class="w-32 flex items-center justify-center hover:grayscale grayscale-0 grow p-2"
+        :class="{ 'pr-4': index === items.length - 1 }"
         :href="item.link"
         target="_blank"
-        :class="{ 'pr-4': index === items.length - 1 }"
       >
         <img class="w-full" :src="item.logo" alt="`logo-${item.link}`" />
       </a>
@@ -37,6 +38,14 @@ const transformPercentages = computed(() => {
   const values = ["translateX(100%)", "translateX(-100%)"];
   return props.right ? values : values.reverse();
 });
+
+const toPercentage = computed(
+  () => transformPercentages.value?.[0] || "translateX(0%)",
+);
+
+const fromPercentage = computed(
+  () => transformPercentages.value?.[1] || "translateX(0%)",
+);
 </script>
 
 <style scoped>
@@ -66,15 +75,14 @@ const transformPercentages = computed(() => {
     transform: translateX(0%);
   }
 
-  /* change these values for directional change*/
   to {
-    transform: v-bind(transformPercentages[0]);
+    transform: v-bind(toPercentage);
   }
 }
 
 @keyframes marquee2 {
   from {
-    transform: v-bind(transformPercentages[1]);
+    transform: v-bind(fromPercentage);
   }
 
   to {
