@@ -2,7 +2,7 @@
   <HomepageMarqueeLinks
     v-for="(array, ind) in technologyItems"
     :key="ind"
-    class="border-2 border-red-500 w-1/2"
+    class="md:w-3/5 w-full"
     :items="array"
     :right="ind === 1"
   />

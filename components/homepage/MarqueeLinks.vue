@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex overflow-x-hidden marquee">
+  <div class="relative flex overflow-hidden marquee">
     <div
       v-for="ind in 2"
       :key="ind"
@@ -21,6 +21,12 @@
         <img class="w-full" :src="item.logo" alt="`logo-${item.link}`" />
       </a>
     </div>
+    <div
+      v-for="ind in 2"
+      :key="ind"
+      class="absolute inset-y-0 pointer-events-none w-1/12 z-10"
+      :class="ind === 1 ? 'right-0 right-gradient' : 'left-0 left-gradient'"
+    />
   </div>
 </template>
 
@@ -28,23 +34,18 @@
 import type { LinkItem } from "~/types/link-item";
 
 interface Props {
-  right: boolean;
+  right?: boolean;
   items: LinkItem[];
 }
 
 const props = withDefaults(defineProps<Props>(), { right: true });
 
-const transformPercentages = computed(() => {
-  const values = ["translateX(100%)", "translateX(-100%)"];
-  return props.right ? values : values.reverse();
-});
-
-const toPercentage = computed(
-  () => transformPercentages.value?.[0] || "translateX(0%)",
+const toPercentage = computed(() =>
+  props.right ? "translateX(100%)" : "translateX(-100%)",
 );
 
-const fromPercentage = computed(
-  () => transformPercentages.value?.[1] || "translateX(0%)",
+const fromPercentage = computed(() =>
+  props.right ? "translateX(-100%)" : "translateX(100%)",
 );
 </script>
 
@@ -60,6 +61,22 @@ const fromPercentage = computed(
 .marquee:hover .marquee__slider1,
 .marquee:hover .marquee__slider2 {
   animation-play-state: paused;
+}
+
+.left-gradient {
+  background: linear-gradient(
+    to right,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.right-gradient {
+  background: linear-gradient(
+    to left,
+    rgba(255, 255, 255, 1),
+    rgba(255, 255, 255, 0)
+  );
 }
 
 .grow {
