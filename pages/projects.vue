@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="default">
-    <template #title>Projects page</template>
+    <template #title> <h1>Projects page</h1></template>
     <template #content>
       <ProjectspageCardsWrapper />
     </template>
