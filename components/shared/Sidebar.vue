@@ -1,8 +1,8 @@
 <template>
-  <div class="flex flex-col">
+  <NuxtLink to="/" class="flex flex-col">
     <span>Barabás Balázs</span>
     <span>Full Stack Developer</span>
-  </div>
+  </NuxtLink>
   <NuxtLink to="/projects"> Projects </NuxtLink>
   <div>Experience</div>
   <div class="flex flex-col">

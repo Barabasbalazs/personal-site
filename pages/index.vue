@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="default">
     <template #title>
-      <h1 class="h-full">Home</h1>
+      <h1>Home</h1>
     </template>
     <template #content>
       <HomepageMarqueeWrapper />
