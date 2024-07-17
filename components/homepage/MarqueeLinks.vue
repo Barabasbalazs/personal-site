@@ -9,17 +9,17 @@
         `marquee__slider${ind === 1 ? '2' : '1'}`,
       ]"
     >
-      <a
+      <NuxtLink
         v-for="(item, index) in items"
         :id="`link-${index}`"
         :key="index"
         class="w-32 flex items-center justify-center hover:grayscale grayscale-0 grow p-2"
         :class="{ 'pr-4': index === items.length - 1 }"
-        :href="item.link"
+        :to="item.link"
         target="_blank"
       >
         <img class="w-full" :src="item.logo" alt="`logo-${item.link}`" />
-      </a>
+      </NuxtLink>
     </div>
     <div
       v-for="ind in 2"

@@ -11,6 +11,6 @@
 
 <script setup lang="ts">
 useHead({
-  title: "Barabás Balázs",
+  title: "Homepage - Barabás Balázs ",
 });
 </script>

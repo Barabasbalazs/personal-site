@@ -9,12 +9,10 @@
       <div class="my-5 flex justify-center items-center">
         <slot name="title" />
       </div>
-      <div class="flex">
-        <div
-          class="flex items-center justify-center w-full h-screen flex-col p-5"
-        >
-          <slot name="content" />
-        </div>
+      <div
+        class="flex items-center justify-center w-full h-screen flex-col p-5"
+      >
+        <slot name="content" />
       </div>
     </div>
   </div>
