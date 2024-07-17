@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex overflow-hidden marquee">
+  <div class="relative flex overflow-hidden marquee w-full">
     <div
       v-for="ind in 2"
       :key="ind"
@@ -13,7 +13,7 @@
         v-for="(item, index) in items"
         :id="`link-${index}`"
         :key="index"
-        class="w-32 flex items-center justify-center hover:grayscale grayscale-0 grow p-2"
+        class="w-16 md:w-32 flex items-center justify-center hover:grayscale grayscale-0 grow p-2"
         :class="{ 'pr-4': index === items.length - 1 }"
         :to="item.link"
         target="_blank"

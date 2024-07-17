@@ -1,8 +1,6 @@
 <template>
   <NuxtLayout name="default">
-    <template #title>
-      <h1>Home</h1>
-    </template>
+    <template #title> Home </template>
     <template #content>
       <HomepageMarqueeWrapper />
     </template>

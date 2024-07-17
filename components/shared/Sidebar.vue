@@ -1,13 +1,45 @@
 <template>
-  <NuxtLink to="/" class="flex flex-col">
-    <span>Barabás Balázs</span>
-    <span>Full Stack Developer</span>
-  </NuxtLink>
-  <NuxtLink to="/projects"> Projects </NuxtLink>
-  <div>Experience</div>
-  <div class="flex flex-col">
-    <span>46.7712° N</span>
-    <span>23.6236° E</span>
-    <span>Cluj, Romania</span>
+  <div
+    class="flex flex-col justify-between py-5 px-3 md:px-5 whitespace-nowrap bg-black text-white"
+  >
+    <div to="/" class="flex flex-col cursor-default">
+      <NuxtLink to="/" class="link">Barabás Balázs</NuxtLink>
+      <span>Full Stack</span>
+      <span>Developer</span>
+    </div>
+    <NuxtLink to="/projects" class="link"> Projects </NuxtLink>
+    <NuxtLink to="/experience" class="link">Experience</NuxtLink>
+    <div class="flex flex-col cursor-default">
+      <span>46° 46′ N</span>
+      <span> 23° 35′ E</span>
+      <span>Cluj, Romania</span>
+    </div>
   </div>
 </template>
+
+<style scoped>
+.link {
+  position: relative;
+  text-decoration: none;
+  width: fit-content;
+  cursor: pointer;
+}
+
+.link::before {
+  padding-top: 2px;
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -1px;
+  left: 0;
+  background-color: #fff;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+</style>
