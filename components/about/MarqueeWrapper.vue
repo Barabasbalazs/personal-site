@@ -1,5 +1,5 @@
 <template>
-  <HomepageMarqueeLinks
+  <AboutMarqueeLinks
     v-for="(array, ind) in technologyItems"
     :key="ind"
     class="md:w-3/5 w-full"

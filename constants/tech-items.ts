@@ -1,4 +1,7 @@
-import type { LinkItem } from "~/types/link-item";
+export interface LinkItem {
+  link: string;
+  logo: string;
+}
 
 export const techItems = [
   {

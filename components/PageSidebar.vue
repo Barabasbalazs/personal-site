@@ -1,14 +1,14 @@
 <template>
   <div
-    class="h-screen absolute top-0 left-0 z-20 flex flex-col justify-between py-5 px-3 md:px-5 whitespace-nowrap bg-black text-white w-40"
+    class="h-screen fixed top-0 left-0 z-20 flex flex-col justify-between py-5 px-3 md:px-5 whitespace-nowrap bg-black text-white w-40"
   >
-    <div to="/" class="flex flex-col cursor-default">
-      <NuxtLink to="/" class="link">Barabás Balázs</NuxtLink>
+    <div class="flex flex-col cursor-default" @click="scrollToSubPage('about')">
+      <span class="link">Barabás Balázs</span>
       <span>Full Stack</span>
       <span>Developer</span>
     </div>
-    <NuxtLink to="/projects" class="link"> Projects </NuxtLink>
-    <NuxtLink to="/experience" class="link">Experience</NuxtLink>
+    <div class="link" @click="scrollToSubPage('projects')">Projects</div>
+    <div class="link" @click="scrollToSubPage('experience')">Experience</div>
     <div class="flex flex-col cursor-default">
       <span>46° 46′ N</span>
       <span> 23° 35′ E</span>
@@ -16,6 +16,17 @@
     </div>
   </div>
 </template>
+
+<script setup lang="ts">
+function scrollToSubPage(id: string) {
+  const subPage = document.getElementById(id);
+  subPage?.scrollIntoView({
+    behavior: "smooth",
+    block: "start",
+    inline: "nearest",
+  });
+}
+</script>
 
 <style scoped>
 .link {

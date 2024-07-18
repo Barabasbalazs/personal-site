@@ -31,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import type { LinkItem } from "~/types/link-item";
+import type { LinkItem } from "~/constants/tech-items";
 
 interface Props {
   right?: boolean;

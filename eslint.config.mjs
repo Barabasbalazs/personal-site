@@ -10,5 +10,8 @@ export default withNuxt({
   rules: {
     ...eslintConfigPrettier.rules,
     ...prettierPlugin.configs.recommended.rules,
+    "@typescript-eslint/ban-types": {
+      "{}": false,
+    },
   },
 });
