@@ -1,8 +1,14 @@
 <template>
   <div
-    class="h-screen fixed top-0 left-0 z-20 flex flex-col justify-between py-5 px-3 md:px-5 whitespace-nowrap bg-black text-white w-40"
+    class="h-screen fixed top-0 left-0 z-20 flex-col justify-between py-5 px-3 md:px-5 whitespace-nowrap bg-black text-white w-40"
   >
-    <div class="flex flex-col cursor-default" @click="scrollToSubPage('about')">
+    <button
+      class="w-fit absolute left-32 md:hidden z-30"
+      @click="emit('hideSidebar')"
+    >
+      X
+    </button>
+    <div class="flex flex-col cursor-default mt-7 md:mt-0" @click="scrollToSubPage('about')">
       <span class="link">Barabás Balázs</span>
       <span>Full Stack</span>
       <span>Developer</span>
@@ -18,6 +24,10 @@
 </template>
 
 <script setup lang="ts">
+const emit = defineEmits<{
+  (e: "hideSidebar"): void;
+}>();
+
 function scrollToSubPage(id: string) {
   const subPage = document.getElementById(id);
   subPage?.scrollIntoView({
