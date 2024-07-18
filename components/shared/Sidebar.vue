@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex flex-col justify-between py-5 px-3 md:px-5 whitespace-nowrap bg-black text-white"
+    class="h-screen absolute top-0 left-0 z-20 flex flex-col justify-between py-5 px-3 md:px-5 whitespace-nowrap bg-black text-white w-40"
   >
     <div to="/" class="flex flex-col cursor-default">
       <NuxtLink to="/" class="link">Barabás Balázs</NuxtLink>

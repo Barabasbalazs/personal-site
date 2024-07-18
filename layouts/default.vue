@@ -1,16 +1,14 @@
 <template>
-  <div class="font-medium flex">
-    <SharedSidebar />
+  <div class="font-medium relative">
+    <SharedSidebar ref="sidebar" />
 
-    <div class="w-full right-width">
-      <div class="my-5 flex justify-center items-center">
+    <div class="w-full right-width ml-40 h-screen flex flex-col">
+      <div class="py-5 flex justify-center items-center">
         <h1>
           <slot name="title" />
         </h1>
       </div>
-      <div
-        class="flex items-center justify-center w-full content-wrapper flex-col p-5"
-      >
+      <div class="flex items-center justify-center w-full flex-col p-5 h-full">
         <slot name="content" />
       </div>
     </div>
@@ -19,8 +17,7 @@
 
 <style scoped>
 .right-width {
-  /*somehow marquee component messes up the flex sizes*/
-  width: calc(100vw - 145.867px);
+  width: calc(100vw - 160px);
 }
 .content-wrapper {
   height: calc(100vh - 60px);
