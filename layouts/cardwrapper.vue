@@ -1,8 +1,5 @@
 <template>
-  <div
-    class="grid gap-5"
-    :class="`grid-${cols ? 'cols' : 'rows'}-1 md:grid-${cols ? 'cols' : 'rows'}-2`"
-  >
+  <div class="grid gap-5" :class="{ 'grid-cols-1 md:grid-cols-2': cols }">
     <slot />
   </div>
 </template>
