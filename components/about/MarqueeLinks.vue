@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex overflow-hidden marquee w-full">
+  <div class="relative flex overflow-hidden marquee">
     <div
       v-for="ind in 2"
       :key="ind"
@@ -13,7 +13,7 @@
         v-for="(item, index) in items"
         :id="`link-${index}`"
         :key="index"
-        class="w-16 md:w-32 flex items-center justify-center hover:grayscale-0 grayscale grow p-2"
+        class="md:w-24 w-16 flex items-center justify-center hover:grayscale-0 grayscale grow p-2"
         :class="{ 'pr-4': index === items.length - 1 }"
         :to="item.link"
         target="_blank"
@@ -66,16 +66,16 @@ const fromPercentage = computed(() =>
 .left-gradient {
   background: linear-gradient(
     to right,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
+    rgba(26, 26, 26, 1),
+    rgba(26, 26, 26, 0)
   );
 }
-
+/*needs to be (255, 255, 255, 1) and all that for white bg*/ 
 .right-gradient {
   background: linear-gradient(
     to left,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
+    rgba(26, 26, 26, 1),
+    rgba(26, 26, 26, 0)
   );
 }
 

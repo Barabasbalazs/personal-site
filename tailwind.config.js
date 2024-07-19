@@ -13,6 +13,9 @@ export default {
       fontFamily: {
         sans: ["Montserrat", "sans"],
       },
+      colors: {
+        "dark": "#1A1A1A",
+      },
     },
   },
   plugins: [],

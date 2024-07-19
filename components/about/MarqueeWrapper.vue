@@ -1,11 +1,15 @@
 <template>
-  <AboutMarqueeLinks
-    v-for="(array, ind) in technologyItems"
-    :key="ind"
-    class="md:w-3/5 w-full"
-    :items="array"
-    :right="ind === 1"
-  />
+  <NuxtLayout name="card">
+    <div class="h-full flex flex-col justify-center items-center marquee-width">
+      <AboutMarqueeLinks
+        v-for="(array, ind) in technologyItems"
+        :key="ind"
+        class="w-full"
+        :items="array"
+        :right="ind === 1"
+      />
+    </div>
+  </NuxtLayout>
 </template>
 
 <script setup lang="ts">
@@ -19,3 +23,14 @@ const technologyItems = computed(() => {
   ];
 });
 </script>
+
+<style scoped>
+.marquee-width {
+  width: calc((100vw / 2) - 80px);
+}
+@media (max-width: 767px) {
+  .marquee-width {
+    width: calc(100vw - 80px);
+  }
+}
+</style>

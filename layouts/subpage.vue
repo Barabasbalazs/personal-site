@@ -12,10 +12,8 @@
 </template>
 
 <style scoped>
-@media (min-width: 768px) {
-  .right-width {
-    width: calc(100vw - 160px) !important;
-  }
+.right-width {
+  width: calc(100vw - 160px) !important;
 }
 
 @media (max-width: 767px) {
