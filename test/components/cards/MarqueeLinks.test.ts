@@ -1,11 +1,11 @@
-import { AboutMarqueeLinks } from "#components";
+import { CardsMarqueeLinks } from "#components";
 import { techItems } from "~/constants/tech-items";
 import { it, describe, expect } from "vitest";
 import { mount } from "@vue/test-utils";
 
 describe("MarqueeLinks component", () => {
   it("Should render all the items from the props provided", () => {
-    const wrapper = mount(AboutMarqueeLinks, {
+    const wrapper = mount(CardsMarqueeLinks, {
       props: {
         items: techItems,
         right: true,

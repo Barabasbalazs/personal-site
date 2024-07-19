@@ -1,12 +1,13 @@
 <template>
   <NuxtLayout name="cardwrapper">
-    <AlternativeCardsAbout />
+    <CardsAbout />
+
+    <CardsMarqueeWrapper />
 
     <NuxtLayout name="cardwrapper" cols>
       <NuxtLayout name="card">Left3 </NuxtLayout>
       <NuxtLayout name="card">Left4 </NuxtLayout>
     </NuxtLayout>
 
-    <AboutMarqueeWrapper />
   </NuxtLayout>
 </template>

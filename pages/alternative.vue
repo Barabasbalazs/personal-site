@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="alternative">
-    <AlternativeLeftPage />
+    <LeftSideWrapper />
     <NuxtLayout name="card"> Right</NuxtLayout>
   </NuxtLayout>
 </template>

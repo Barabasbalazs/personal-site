@@ -1,7 +1,7 @@
 import {
-  AboutMarqueeWrapper,
-  ProjectsCardsWrapper,
-  ExperienceWrapper,
+  CardsMarqueeWrapper,
+  //ProjectsCardsWrapper,
+  //ExperienceWrapper,
 } from "#components";
 import type { ComponentOptionsMixin, DefineComponent, PublicProps } from "vue";
 
@@ -28,17 +28,17 @@ interface SubPage {
 export const subPages = [
   {
     title: "About",
-    content: AboutMarqueeWrapper,
+    content: CardsMarqueeWrapper,
     id: "about",
   },
-  {
-    title: "Projects",
-    content: ProjectsCardsWrapper,
-    id: "projects",
-  },
-  {
-    title: "Experience",
-    content: ExperienceWrapper,
-    id: "experience",
-  },
+  // {
+  //   title: "Projects",
+  //   content: ProjectsCardsWrapper,
+  //   id: "projects",
+  // },
+  // {
+  //   title: "Experience",
+  //   content: ExperienceWrapper,
+  //   id: "experience",
+  // },
 ] as SubPage[];

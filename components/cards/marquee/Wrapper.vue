@@ -1,7 +1,7 @@
 <template>
   <NuxtLayout name="card">
     <div class="h-full flex flex-col justify-center items-center marquee-width">
-      <AboutMarqueeLinks
+      <CardsMarqueeLinks
         v-for="(array, ind) in technologyItems"
         :key="ind"
         class="w-full"
