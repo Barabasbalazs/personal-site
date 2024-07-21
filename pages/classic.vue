@@ -9,7 +9,7 @@
       <template #title>{{ title }}</template>
       <template #content>
         <template v-if="typeof content === 'string'">{{ content }}</template>
-        <component v-else :is="content" />
+        <component :is="content" v-else />
       </template>
     </NuxtLayout>
   </NuxtLayout>
@@ -23,6 +23,6 @@ onMounted(() =>
     behavior: "smooth",
     block: "start",
     inline: "nearest",
-  })
+  }),
 );
 </script>

@@ -16,8 +16,12 @@
       <span>Full Stack</span>
       <span>Developer</span>
     </div>
-    <div class="underline-link" @click="scrollToSubPage('projects')">Projects</div>
-    <div class="underline-link" @click="scrollToSubPage('experience')">Experience</div>
+    <div class="underline-link" @click="scrollToSubPage('projects')">
+      Projects
+    </div>
+    <div class="underline-link" @click="scrollToSubPage('experience')">
+      Experience
+    </div>
     <div class="flex flex-col cursor-default">
       <span>46° 46′ N</span>
       <span> 23° 35′ E</span>

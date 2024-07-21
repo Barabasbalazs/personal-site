@@ -14,7 +14,7 @@ export default {
         sans: ["Montserrat", "sans"],
       },
       colors: {
-        "dark": "#1A1A1A",
+        dark: "#1A1A1A",
       },
     },
   },

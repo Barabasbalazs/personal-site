@@ -11,18 +11,17 @@
           >
             <div
               v-for="itemIndex in years.length - 1"
+              :key="itemIndex"
               class="w-full flex justify-between"
             >
               <div
                 v-for="{ item, index } in sortedExperiences[itemIndex - 1]"
+                :key="index"
                 class="flex flex-col w-full h-full items-center relative"
               >
                 <div
-                  class="absolute bg-white text-dark p-2 border rounded-3xl text-xs font-semibold lg:whitespace-nowrap text-center min-w-16"
-                  :class="[
-                    { mt_34: index % 2 === 0 },
-                    index % 2 === 0 ? 'z-30' : 'z-10',
-                  ]"
+                  class="absolute bg-white text-dark p-2 border border-dark rounded-3xl text-xs font-semibold lg:whitespace-nowrap text-center min-w-16"
+                  :class="[{ mt_34: index % 2 === 0 }, `z-${index * 10}`]"
                 >
                   <p>{{ item }}</p>
                 </div>
@@ -73,6 +72,10 @@ const experienceItems = [
     item: "America",
   },
   {
+    start: 2021,
+    item: "America2",
+  },
+  {
     start: 2022,
     item: "B2B Platform",
   },
@@ -92,7 +95,7 @@ const sortedExperiences = computed(() => {
     index,
   }));
   return years.map((year) =>
-    indexedExperienceItems.filter((item) => item.start === year)
+    indexedExperienceItems.filter((item) => item.start === year),
   );
 });
 

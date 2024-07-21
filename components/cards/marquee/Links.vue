@@ -41,11 +41,11 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), { right: true });
 
 const toPercentage = computed(() =>
-  props.right ? "translateX(100%)" : "translateX(-100%)"
+  props.right ? "translateX(100%)" : "translateX(-100%)",
 );
 
 const fromPercentage = computed(() =>
-  props.right ? "translateX(-100%)" : "translateX(100%)"
+  props.right ? "translateX(-100%)" : "translateX(100%)",
 );
 </script>
 
