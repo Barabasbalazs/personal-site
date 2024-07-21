@@ -6,7 +6,8 @@
         <span class="h-1 w-full bg-white relative">
           <!--upper container-->
           <div
-            class="flex w-full justify-between absolute h-24 bottom-0 upper-container"
+            class="flex w-full justify-between absolute h-24 bottom-0"
+            :style="wrapperPaddingStyles"
           >
             <div
               v-for="itemIndex in years.length - 1"
@@ -14,15 +15,21 @@
             >
               <div
                 v-for="{ item, index } in sortedExperiences[itemIndex - 1]"
-                class="flex flex-col w-full h-full items-center"
+                class="flex flex-col w-full h-full items-center relative"
               >
                 <div
-                  class="bg-white text-dark p-2 border rounded-3xl text-xs font-semibold lg:whitespace-nowrap text-center"
-                  :class="{ mt_34: index % 2 === 0 }"
+                  class="absolute bg-white text-dark p-2 border rounded-3xl text-xs font-semibold lg:whitespace-nowrap text-center min-w-16"
+                  :class="[
+                    { mt_34: index % 2 === 0 },
+                    index % 2 === 0 ? 'z-30' : 'z-10',
+                  ]"
                 >
                   <p>{{ item }}</p>
                 </div>
-                <span class="h-full w-0.5 bg-white" />
+                <span
+                  class="w-0.5 bg-white"
+                  :class="index % 2 === 0 ? 'h-1/2 mt-12' : 'h-full'"
+                />
 
                 <span
                   class="bg-white bottom-0 absolute p-1 rounded-full border-2 border-dark mb_n_4"
@@ -63,7 +70,7 @@ const experienceItems = [
   },
   {
     start: 2021,
-    item: "America"
+    item: "America",
   },
   {
     start: 2022,
@@ -89,24 +96,16 @@ const sortedExperiences = computed(() => {
   );
 });
 
-const paddingPercentage = computed(
-  () => `calc((100 / ${years.length}) / 2 * 1%)`
-);
+const wrapperPaddingStyles = computed(() => {
+  const calculatedSize = `calc((100 / ${years.length}) / 2 * 1%)`;
+  return [
+    `padding-left: ${calculatedSize}`,
+    `padding-right: ${calculatedSize}`,
+  ];
+});
 </script>
 
 <style scoped>
-@media (max-width: 400px) {
-  .upper-container {
-    padding-left: 0px;
-    padding-right: v-bind(paddingPercentage);
-  }
-}
-@media (min-width: 401px) {
-  .upper-container {
-    padding-left: v-bind(paddingPercentage);
-    padding-right: v-bind(paddingPercentage);
-  }
-}
 .mb_n_4 {
   margin-bottom: -4px;
 }
