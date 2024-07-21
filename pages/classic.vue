@@ -18,10 +18,6 @@
 <script setup lang="ts">
 import { subPages } from "~/constants/subpage-items";
 
-useHead({
-  title: "Homepage - Barabás Balázs ",
-});
-
 onMounted(() =>
   document.getElementById("about")?.scrollIntoView({
     behavior: "smooth",

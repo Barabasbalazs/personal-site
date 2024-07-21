@@ -5,9 +5,8 @@
     <CardsMarqueeWrapper />
 
     <NuxtLayout name="cardwrapper" cols>
-      <NuxtLayout name="card">Left3 </NuxtLayout>
+      <CardsContact />
       <NuxtLayout name="card">Left4 </NuxtLayout>
     </NuxtLayout>
-
   </NuxtLayout>
 </template>

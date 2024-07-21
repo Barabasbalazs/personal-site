@@ -29,4 +29,5 @@ export const defaultHeadItems = {
     },
   ],
   link: linkItems,
+  title: "Barabás Balázs - Full Stack Developer"
 } as MetaObject;

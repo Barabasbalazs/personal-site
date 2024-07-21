@@ -76,4 +76,8 @@ export const techItems = [
     link: "https://vitest.dev/",
     logo: "/app/icons/vitest.svg",
   },
+  {
+    link: "https://www.python.org/",
+    logo: "https://icon.icepanel.io/Technology/svg/Python.svg",
+  },
 ] as LinkItem[];

@@ -16,10 +16,10 @@
 import { techItems } from "~/constants/tech-items.js";
 
 const technologyItems = computed(() => {
-  const middle = Math.floor((techItems.length - 1) / 2);
+  const middle = Math.floor(techItems.length / 2);
   return [
     techItems.slice(0, middle),
-    techItems.slice(middle + 1, techItems.length - 1),
+    techItems.slice(middle, techItems.length),
   ];
 });
 </script>
@@ -30,7 +30,7 @@ const technologyItems = computed(() => {
 }
 @media (max-width: 767px) {
   .marquee-width {
-    width: calc(100vw - 80px);
+    width: calc(100vw - 90px);
   }
 }
 </style>
