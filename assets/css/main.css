@@ -26,3 +26,19 @@
   .underline-link:hover::before {
     transform: scaleX(1);
   }
+
+  .left-gradient {
+    background: linear-gradient(
+      to right,
+      rgba(26, 26, 26, 1),
+      rgba(26, 26, 26, 0)
+    );
+  }
+  /*needs to be (255, 255, 255, 1) and all that for white bg*/
+  .right-gradient {
+    background: linear-gradient(
+      to left,
+      rgba(26, 26, 26, 1),
+      rgba(26, 26, 26, 0)
+    );
+  }

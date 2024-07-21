@@ -41,11 +41,11 @@ interface Props {
 const props = withDefaults(defineProps<Props>(), { right: true });
 
 const toPercentage = computed(() =>
-  props.right ? "translateX(100%)" : "translateX(-100%)",
+  props.right ? "translateX(100%)" : "translateX(-100%)"
 );
 
 const fromPercentage = computed(() =>
-  props.right ? "translateX(-100%)" : "translateX(100%)",
+  props.right ? "translateX(-100%)" : "translateX(100%)"
 );
 </script>
 
@@ -61,22 +61,6 @@ const fromPercentage = computed(() =>
 .marquee:hover .marquee__slider1,
 .marquee:hover .marquee__slider2 {
   animation-play-state: paused;
-}
-
-.left-gradient {
-  background: linear-gradient(
-    to right,
-    rgba(26, 26, 26, 1),
-    rgba(26, 26, 26, 0)
-  );
-}
-/*needs to be (255, 255, 255, 1) and all that for white bg*/ 
-.right-gradient {
-  background: linear-gradient(
-    to left,
-    rgba(26, 26, 26, 1),
-    rgba(26, 26, 26, 0)
-  );
 }
 
 .grow {

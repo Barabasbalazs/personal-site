@@ -6,7 +6,7 @@
 
     <NuxtLayout name="cardwrapper" cols>
       <CardsContact />
-      <NuxtLayout name="card">Left4 </NuxtLayout>
+      <CardsTimeline />
     </NuxtLayout>
   </NuxtLayout>
 </template>
