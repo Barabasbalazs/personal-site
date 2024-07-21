@@ -4,9 +4,10 @@
 
     <CardsMarqueeWrapper />
 
-    <NuxtLayout name="cardwrapper" cols>
+    <!-- <NuxtLayout name="cardwrapper" cols>
       <CardsContact />
       <CardsTimeline />
-    </NuxtLayout>
+    </NuxtLayout> -->
+    <CardsTimeline />
   </NuxtLayout>
 </template>

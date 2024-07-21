@@ -4,6 +4,32 @@
       <div class="flex items-center justify-center h-full w-full">
         <!--Main line-->
         <span class="h-1 w-full bg-white relative">
+          <!--upper container-->
+          <div
+            class="flex w-full justify-between absolute h-24 bottom-0 upper-container"
+          >
+            <div
+              v-for="itemIndex in years.length - 1"
+              class="w-full flex justify-between"
+            >
+              <div
+                v-for="{ item, index } in sortedExperiences[itemIndex - 1]"
+                class="flex flex-col w-full h-full items-center"
+              >
+                <div
+                  class="bg-white text-dark p-2 border rounded-3xl text-xs font-semibold lg:whitespace-nowrap text-center"
+                  :class="{ mt_34: index % 2 === 0 }"
+                >
+                  <p>{{ item }}</p>
+                </div>
+                <span class="h-full w-0.5 bg-white" />
+
+                <span
+                  class="bg-white bottom-0 absolute p-1 rounded-full border-2 border-dark mb_n_4"
+                />
+              </div>
+            </div>
+          </div>
           <!--the lower part in years-->
           <div class="flex w-full justify-between absolute h-24">
             <div
@@ -28,7 +54,7 @@
 </template>
 
 <script setup lang="ts">
-const years = [2020, 2021, 2022, 2023, 2024];
+const years = [2020, 2021, 2022, 2023, 2024, 2025];
 
 const experienceItems = [
   {
@@ -36,16 +62,16 @@ const experienceItems = [
     item: "BSc in Finances",
   },
   {
+    start: 2021,
+    item: "America"
+  },
+  {
     start: 2022,
-    item: "Freelance developer",
+    item: "B2B Platform",
   },
   {
     start: 2023,
-    item: "Implemented B2B ecommerce system",
-  },
-  {
-    start: 2023,
-    item: "Full Stack Developer @ Webgurus",
+    item: "Webgurus",
   },
   {
     start: 2024,
@@ -53,11 +79,39 @@ const experienceItems = [
   },
 ];
 
-const sortedExperiences = computed(() =>
-  years
-    .map((year) => experienceItems.filter((item) => item.start === year))
-    .filter((item) => item)
-);
+const sortedExperiences = computed(() => {
+  const indexedExperienceItems = experienceItems.map((item, index) => ({
+    ...item,
+    index,
+  }));
+  return years.map((year) =>
+    indexedExperienceItems.filter((item) => item.start === year)
+  );
+});
 
-console.log(sortedExperiences.value);
+const paddingPercentage = computed(
+  () => `calc((100 / ${years.length}) / 2 * 1%)`
+);
 </script>
+
+<style scoped>
+@media (max-width: 400px) {
+  .upper-container {
+    padding-left: 0px;
+    padding-right: v-bind(paddingPercentage);
+  }
+}
+@media (min-width: 401px) {
+  .upper-container {
+    padding-left: v-bind(paddingPercentage);
+    padding-right: v-bind(paddingPercentage);
+  }
+}
+.mb_n_4 {
+  margin-bottom: -4px;
+}
+
+.mt_34 {
+  margin-top: 34px;
+}
+</style>
