@@ -11,15 +11,23 @@ export const projectItems = [
     title: "Bickley and Mitchell",
     subtitle: "B2B ecommerce platform",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum",
-    img: "https://media.istockphoto.com/id/183821822/photo/say.jpg?s=612x612&w=0&k=20&c=kRmCjTzA9cq4amgRgeHkZsZuvxezUtC8wdDYfKg-mho=",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed doeiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    img: "/app/icons/cart-outline.svg",
     link: "https://b2b.bickleyandmitchell.com",
   },
   {
-    title: "Map based Hiking App",
-    subtitle: "Real time Tracking",
+    title: "Map App",
+    subtitle: "Hiking with real time Tracking",
     description: "Just Short",
-    img: "https://images.squarespace-cdn.com/content/v1/5e10bdc20efb8f0d169f85f9/09943d85-b8c7-4d64-af31-1a27d1b76698/arrow.png",
-    link: "https://github.com/Barabasbalazs/map-frontend",
+    img: "/app/icons/map-legend.svg",
+    link: "https://balazsmap.live",
+  },
+  {
+    title: "esm-import-modifier",
+    subtitle: "Deno utility script",
+    description:
+      "A small script that helps rewrite ES imports with just a config file. Written in Deno with the help of an ES syntax module lexer and Worker modules.",
+    img: "/app/logos/deno-white.svg", //denoWhiteLogo,
+    link: "https://github.com/Barabasbalazs/esm-import-modifier",
   },
 ] as ProjectItem[];

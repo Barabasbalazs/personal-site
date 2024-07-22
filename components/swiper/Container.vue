@@ -10,7 +10,7 @@
         @click="slideToIndex(currentIndex - 1)"
       >
         <img
-          src="/assets/icons/app/chevron-left.svg"
+          src="/app/icons/chevron-left.svg"
           alt="chevron-left-icon"
           class="w-10 h-10 md:w-16 md:h-16"
         />
@@ -26,7 +26,7 @@
         @click="slideToIndex(currentIndex + 1)"
       >
         <img
-          src="/assets/icons/app/chevron-right.svg"
+          src="/app/icons/chevron-right.svg"
           alt="chevron-right-icon"
           class="w-10 h-10 md:w-16 md:h-16"
         />
@@ -71,7 +71,7 @@ function slideToIndex(index: number) {
 <style scoped>
 @media (max-width: 767px) {
   .wrapper-height {
-    min-height: 400px;
+    min-height: 480px;
   }
 }
 @media (min-width: 768px) {

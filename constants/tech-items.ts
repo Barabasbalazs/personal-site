@@ -6,78 +6,82 @@ export interface LinkItem {
 export const techItems = [
   {
     link: "https://vuejs.org/",
-    logo: "https://icon.icepanel.io/Technology/svg/Vue.js.svg",
+    logo: "/app/logos/Vue.js.svg",
   },
   {
     link: "https://fastify.dev/",
-    logo: "https://icon.icepanel.io/Technology/png-shadow-512/Fastify.png",
+    logo: "/app/logos/Fastify.svg",
   },
   {
     link: "https://nodejs.org/en",
-    logo: "https://icon.icepanel.io/Technology/svg/Node.js.svg",
+    logo: "/app/logos/Node.js.svg",
   },
   {
     link: "https://deno.com/",
-    logo: "https://icon.icepanel.io/Technology/png-shadow-512/Deno.png",
+    logo: "/app/logos/deno.svg",
   },
   {
     link: "https://jestjs.io/",
-    logo: "https://icon.icepanel.io/Technology/svg/Jest.svg",
+    logo: "/app/logos/Jest.svg",
   },
   {
     link: "https://www.cypress.io/",
-    logo: "https://icon.icepanel.io/Technology/png-shadow-512/Cypress.png",
+    logo: "/app/logos/Cypress.svg",
   },
   {
     link: "https://nuxt.com/",
-    logo: "https://icon.icepanel.io/Technology/svg/Nuxt-JS.svg",
+    logo: "/app/logos/Nuxt.js.svg",
   },
   {
     link: "https://expressjs.com/",
-    logo: "https://icon.icepanel.io/Technology/png-shadow-512/Express.png",
+    logo: "/app/logos/Express.svg",
   },
   {
     link: "https://www.typescriptlang.org/",
-    logo: "https://icon.icepanel.io/Technology/svg/TypeScript.svg",
+    logo: "/app/logos/TypeScript.svg",
   },
   {
     link: "https://ionicframework.com/",
-    logo: "https://icon.icepanel.io/Technology/svg/Ionic.svg",
+    logo: "/app/logos/Ionic.svg",
   },
   {
     link: "https://firebase.google.com/",
-    logo: "https://icon.icepanel.io/Technology/svg/Firebase.svg",
+    logo: "/app/logos/Firebase.svg",
   },
   {
     link: "https://azure.microsoft.com/en-us",
-    logo: "https://icon.icepanel.io/Technology/svg/Azure.svg",
+    logo: "/app/logos/Azure.svg",
   },
   {
     link: "https://www.postgresql.org/",
-    logo: "https://icon.icepanel.io/Technology/svg/PostgresSQL.svg",
+    logo: "/app/logos/PostgresSQL.svg",
   },
   {
     link: "https://www.mongodb.com/",
-    logo: "https://icon.icepanel.io/Technology/svg/MongoDB.svg",
+    logo: "/app/logos/MongoDB.svg",
   },
   {
     link: "https://tailwindcss.com/",
-    logo: "https://icon.icepanel.io/Technology/svg/Tailwind-CSS.svg",
+    logo: "/app/logos/TailwindCSS.svg",
   },
   {
     link: "https://socket.io/",
-    logo: "https://icon.icepanel.io/Technology/png-shadow-512/Socket.io.png",
+    logo: "/app/logos/Socket.io.svg",
   },
   {
     link: "https://sass-lang.com/",
-    logo: "https://icon.icepanel.io/Technology/svg/Sass.svg",
+    logo: "/app/logos/Sass.svg",
   },
   {
     link: "https://vitest.dev/",
-    logo: "/app/icons/vitest.svg",
+    logo: "/app/logos/vitest.svg",
   },
   {
     link: "https://www.python.org/",
-    logo: "https://icon.icepanel.io/Technology/svg/Python.svg",
+    logo: "/app/logos/Python.svg",
+  },
+  {
+    link: "https://www.docker.com/",
+    logo: "/app/logos/Docker.svg",
   },
 ] as LinkItem[];
