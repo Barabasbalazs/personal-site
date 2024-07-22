@@ -60,34 +60,7 @@
 </template>
 
 <script setup lang="ts">
-const years = [2020, 2021, 2022, 2023, 2024, 2025];
-
-const experienceItems = [
-  {
-    start: 2020,
-    item: "BSc in Finances",
-  },
-  {
-    start: 2021,
-    item: "America",
-  },
-  {
-    start: 2021,
-    item: "America2",
-  },
-  {
-    start: 2022,
-    item: "B2B Platform",
-  },
-  {
-    start: 2023,
-    item: "Webgurus",
-  },
-  {
-    start: 2024,
-    item: "BSc in CS",
-  },
-];
+import { years, experienceItems } from "~/constants/timeline-items";
 
 const sortedExperiences = computed(() => {
   const indexedExperienceItems = experienceItems.map((item, index) => ({

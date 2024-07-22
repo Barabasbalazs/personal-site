@@ -1,6 +1,6 @@
 <template>
   <NuxtLayout name="default">
     <LeftSideWrapper />
-    <NuxtLayout name="card"> Right</NuxtLayout>
+    <CardsProjects />
   </NuxtLayout>
 </template>

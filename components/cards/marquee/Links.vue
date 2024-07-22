@@ -63,14 +63,6 @@ const fromPercentage = computed(() =>
   animation-play-state: paused;
 }
 
-.grow {
-  transition: all 0.2s ease-in-out;
-}
-
-.grow:hover {
-  transform: scale(1.1);
-}
-
 @keyframes marquee1 {
   from {
     transform: translateX(0%);

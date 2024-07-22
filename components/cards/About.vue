@@ -8,16 +8,24 @@
           <h1 class="font-semibold">Balázs</h1>
         </div>
         <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum
+          {{ description }}
         </p>
       </div>
-      <span class="text-stone-400">46°46'51.4"N 23°36'15.3"E</span>
+      <NuxtLink
+        :to="gmapQuerry"
+        class="text-stone-400 underline-link"
+        target="_blank"
+        >{{ coordinates.displayValue }}</NuxtLink
+      >
     </div>
   </NuxtLayout>
 </template>
+
+<script setup lang="ts">
+import { coordinates, description } from "~/constants/about-items";
+
+const gmapQuerry = computed(
+  () =>
+    `https://www.google.com/maps/search/?api=1&query=${coordinates?.numericalValue?.lat}%2C+${coordinates?.numericalValue?.lng}`,
+);
+</script>
