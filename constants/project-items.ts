@@ -17,7 +17,7 @@ export const projectItems = [
   },
   {
     title: "Map App",
-    subtitle: "Hiking with real time Tracking",
+    subtitle: "Hiking App with real time Tracking",
     description: "Just Short",
     img: "/app/icons/map-legend.svg",
     link: "https://balazsmap.live",
