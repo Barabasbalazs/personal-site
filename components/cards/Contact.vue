@@ -6,7 +6,7 @@
       <h3 class="uppercase">Contact</h3>
       <div class="flex gap-3 h-full justify-between items-center w-full">
         <div class="w-1/2 flex justify-center">
-          <img class="w-32" src="/app/icons/account-box-outline.svg" />
+          <img class="w-32" src="assets/app/icons/account-box-outline.svg" />
         </div>
         <div class="w-1/2 flex justify-center">
           <div

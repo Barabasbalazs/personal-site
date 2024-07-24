@@ -6,82 +6,82 @@ export interface LinkItem {
 export const techItems = [
   {
     link: "https://vuejs.org/",
-    logo: "/app/logos/Vue.js.svg",
+    logo: new URL("assets/app/logos/Vue.js.svg", import.meta.url).href,
   },
   {
     link: "https://fastify.dev/",
-    logo: "/app/logos/Fastify.svg",
+    logo: new URL("assets/app/logos/Fastify.svg", import.meta.url).href,
   },
   {
     link: "https://nodejs.org/en",
-    logo: "/app/logos/Node.js.svg",
+    logo: new URL("assets/app/logos/Node.js.svg", import.meta.url).href,
   },
   {
     link: "https://deno.com/",
-    logo: "/app/logos/deno.svg",
+    logo: new URL("assets/app/logos/deno.svg", import.meta.url).href,
   },
   {
     link: "https://jestjs.io/",
-    logo: "/app/logos/Jest.svg",
+    logo: new URL("assets/app/logos/Jest.svg", import.meta.url).href,
   },
   {
     link: "https://www.cypress.io/",
-    logo: "/app/logos/Cypress.svg",
+    logo: new URL("assets/app/logos/Cypress.svg", import.meta.url).href,
   },
   {
     link: "https://nuxt.com/",
-    logo: "/app/logos/Nuxt.js.svg",
+    logo: new URL("assets/app/logos/Nuxt.js.svg", import.meta.url).href,
   },
   {
     link: "https://expressjs.com/",
-    logo: "/app/logos/Express.svg",
+    logo: new URL("assets/app/logos/Express.svg", import.meta.url).href,
   },
   {
     link: "https://www.typescriptlang.org/",
-    logo: "/app/logos/TypeScript.svg",
+    logo: new URL("assets/app/logos/TypeScript.svg", import.meta.url).href,
   },
   {
     link: "https://ionicframework.com/",
-    logo: "/app/logos/Ionic.svg",
+    logo: new URL("assets/app/logos/Ionic.svg", import.meta.url).href,
   },
   {
     link: "https://firebase.google.com/",
-    logo: "/app/logos/Firebase.svg",
+    logo: new URL("assets/app/logos/Firebase.svg", import.meta.url).href,
   },
   {
     link: "https://azure.microsoft.com/en-us",
-    logo: "/app/logos/Azure.svg",
+    logo: new URL("assets/app/logos/Azure.svg", import.meta.url).href,
   },
   {
     link: "https://www.postgresql.org/",
-    logo: "/app/logos/PostgresSQL.svg",
+    logo: new URL("assets/app/logos/PostgresSQL.svg", import.meta.url).href,
   },
   {
     link: "https://www.mongodb.com/",
-    logo: "/app/logos/MongoDB.svg",
+    logo: new URL("assets/app/logos/MongoDB.svg", import.meta.url).href,
   },
   {
     link: "https://tailwindcss.com/",
-    logo: "/app/logos/TailwindCSS.svg",
+    logo: new URL("assets/app/logos/TailwindCSS.svg", import.meta.url).href,
   },
   {
     link: "https://socket.io/",
-    logo: "/app/logos/Socket.io.svg",
+    logo: new URL("assets/app/logos/Socket.io.svg", import.meta.url).href,
   },
   {
     link: "https://sass-lang.com/",
-    logo: "/app/logos/Sass.svg",
+    logo: new URL("assets/app/logos/Sass.svg", import.meta.url).href,
   },
   {
     link: "https://vitest.dev/",
-    logo: "/app/logos/vitest.svg",
+    logo: new URL("assets/app/logos/vitest.svg", import.meta.url).href,
   },
   {
     link: "https://www.python.org/",
-    logo: "/app/logos/Python.svg",
+    logo: new URL("assets/app/logos/Python.svg", import.meta.url).href,
   },
   {
     link: "https://www.docker.com/",
-    logo: "/app/logos/Docker.svg",
+    logo: new URL("assets/app/logos/Docker.svg", import.meta.url).href,
   },
 ] as LinkItem[];

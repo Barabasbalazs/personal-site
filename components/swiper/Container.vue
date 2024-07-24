@@ -10,7 +10,7 @@
         @click="slideToIndex(currentIndex - 1)"
       >
         <img
-          src="/app/icons/chevron-left.svg"
+          src="assets/app/icons/chevron-left.svg"
           alt="chevron-left-icon"
           class="w-10 h-10 md:w-16 md:h-16"
         />
@@ -26,7 +26,7 @@
         @click="slideToIndex(currentIndex + 1)"
       >
         <img
-          src="/app/icons/chevron-right.svg"
+          src="assets/app/icons/chevron-right.svg"
           alt="chevron-right-icon"
           class="w-10 h-10 md:w-16 md:h-16"
         />

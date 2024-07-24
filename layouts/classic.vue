@@ -4,7 +4,7 @@
       class="absolute top-6 w-5 left-4"
       @click="isMobileSidebarVisible = !isMobileSidebarVisible"
     >
-      <img src="/app/icons/menu.svg" alt="sidemenu" />
+      <img src="assets/app/icons/menu.svg" alt="sidemenu" />
     </button>
     <PageSidebar class="hidden md:flex" />
     <Transition name="fade" mode="out-in">
