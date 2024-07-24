@@ -4,7 +4,7 @@ const linkItems = [
   {
     rel: "icon",
     type: "image/png",
-    href: "assets/favicon2.png",
+    href: new URL("assets/favicon.png", import.meta.url).href,
   },
   {
     rel: "preconnect",
