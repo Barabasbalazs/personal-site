@@ -2,7 +2,9 @@
 export default defineNuxtConfig({
   app: {
     baseURL: "/personal-site/",
+    buildAssetsDir: "/",
   },
+  ssr: false,
   devtools: { enabled: true },
   modules: ["@nuxt/eslint", "@nuxt/test-utils/module"],
   typescript: {
