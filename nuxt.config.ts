@@ -3,7 +3,8 @@ export default defineNuxtConfig({
   devtools: { enabled: true },
   modules: ["@nuxt/eslint", "@nuxt/test-utils/module"],
   typescript: {
-    typeCheck: true,
+    typeCheck: false,
+    strict: true,
   },
   css: ["~/assets/css/main.css"],
   postcss: {

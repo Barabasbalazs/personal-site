@@ -1,13 +1,17 @@
 <template>
   <div class="relative w-full">
     <div class="flex flex-col justify-between gap-6 h-full">
-      <div class="flex items-center justify-center w-full h-full">
-        <NuxtLink class="w-3/5" :to="project.link" target="_blank">
-          <img class="min-w-1/2" :src="project.img" :alt="project.title"
-        /></NuxtLink>
-      </div>
+      <NuxtLink
+        class="flex items-center justify-center w-full h-full"
+        :to="project.link"
+        target="_blank"
+      >
+        <div class="w-1/2">
+          <img class="min-w-1/2" :src="project.img" :alt="project.title" />
+        </div>
+      </NuxtLink>
       <div class="bg-dark w-full">
-        <div class="flex flex-col gap-3 w-4/5">
+        <div class="flex flex-col gap-3 w-full">
           <h3 class="uppercase">
             {{ project.subtitle }}
           </h3>
