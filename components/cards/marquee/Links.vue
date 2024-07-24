@@ -18,7 +18,12 @@
         :to="item.link"
         target="_blank"
       >
-        <img class="w-full" :src="item.logo" alt="`logo-${item.link}`" />
+        <img
+          class="w-full"
+          :src="item.logo"
+          alt="`logo-${item.link}`"
+          loading="lazy"
+        />
       </NuxtLink>
     </div>
     <div

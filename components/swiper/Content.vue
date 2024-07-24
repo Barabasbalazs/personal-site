@@ -7,7 +7,12 @@
         target="_blank"
       >
         <div class="w-1/2">
-          <img class="min-w-1/2" :src="project.img" :alt="project.title" />
+          <img
+            class="min-w-1/2"
+            :src="project.img"
+            :alt="project.title"
+            loading="lazy"
+          />
         </div>
       </NuxtLink>
       <div class="bg-dark w-full">
