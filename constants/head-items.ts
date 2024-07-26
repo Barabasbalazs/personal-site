@@ -30,4 +30,5 @@ export const defaultHeadItems = {
   ],
   link: linkItems,
   title: "Barabás Balázs - Full Stack Developer",
+  bodyAttrs: { class: "bg-black" },
 } as MetaObject;
