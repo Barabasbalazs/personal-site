@@ -15,7 +15,7 @@ export const projectItems = [
     title: "Bickley and Mitchell",
     subtitle: "B2B ecommerce platform",
     description:
-      "E-commerce platform featuring a custom admin panel and ERP integration, designed for the B2B clients of the Amsterdam-based clothing brand Bickley + Mitchell.",
+      "A modern e-commerce platform featuring a custom admin panel and integrated ERP system, designed to enhance the B2B experience for the Amsterdam-based fashion brand, Bickley + Mitchell.",
     img: cartOutline,
     link: "https://b2b.bickleyandmitchell.com",
   },
@@ -23,7 +23,7 @@ export const projectItems = [
     title: "Map App",
     subtitle: "Hiking App with real time Tracking",
     description:
-      "A web application with real-time tracking functionalities, designed to help tourists and their guides explore various areas more effectively, whether in natural settings or urban environments.",
+      "An intuitive web app with real-time tracking, helping tourists and guides explore and navigate both natural landscapes and urban areas with ease and efficiency.",
     img: mapLegend,
     link: "https://balazsmap.live",
   },
@@ -31,7 +31,7 @@ export const projectItems = [
     title: "esm-import-modifier",
     subtitle: "Deno utility script",
     description:
-      "Utility script that helps rewrite ES imports with just a config file. Written in Deno with the help of an ES syntax module lexer and Worker modules.",
+      "A powerful utility script that simplifies rewriting ES imports using just a config file. Built in Deno, leveraging an ES syntax module lexer and Worker modules for efficiency.",
     img: denoWhite,
     link: "https://github.com/Barabasbalazs/esm-import-modifier",
   },
