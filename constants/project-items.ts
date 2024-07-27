@@ -1,3 +1,5 @@
+import cartOutline from "~/assets/app/icons/cart-outline.svg";
+
 export interface ProjectItem {
   title: string;
   subtitle: string;
@@ -12,7 +14,7 @@ export const projectItems = [
     subtitle: "B2B ecommerce platform",
     description:
       "E-commerce platform featuring a custom admin panel and ERP integration, designed for the B2B clients of the Amsterdam-based clothing brand Bickley + Mitchell.",
-    img: new URL("assets/app/icons/cart-outline.svg", import.meta.url).href,
+    img: cartOutline, //"assets/app/icons/cart-outline.svg",
     link: "https://b2b.bickleyandmitchell.com",
   },
   {

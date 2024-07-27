@@ -21,6 +21,7 @@ jobs:
       - run: npx nuxi generate
         env:
           NITRO_PRESET: github_pages
+          BASE_URL: /personal-site/
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v1
