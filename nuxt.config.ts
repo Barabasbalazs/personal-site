@@ -1,7 +1,7 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   app: {
-    baseURL: process.env.BASE_URL?.toString(), //process.env.NODE_ENV === "production" ? "/personal-site/" : "/",
+    baseURL: process.env.BASE_URL?.toString(),
   },
   devtools: { enabled: true },
   modules: ["@nuxt/eslint", "@nuxt/test-utils/module"],

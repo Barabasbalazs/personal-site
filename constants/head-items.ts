@@ -1,10 +1,11 @@
+import favicon from "~/assets/favicon.png";
 import type { MetaObject } from "nuxt/schema";
 
 const linkItems = [
   {
     rel: "icon",
     type: "image/png",
-    href: new URL("assets/favicon.png", import.meta.url).href,
+    href: favicon,
   },
   {
     rel: "preconnect",

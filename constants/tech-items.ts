@@ -1,87 +1,108 @@
+import vueLogo from "~/assets/app/logos/Vue.js.svg";
+import fastifyLogo from "~/assets/app/logos/Fastify.svg";
+import nodeLogo from "~/assets/app/logos/Node.js.svg";
+import denoLogo from "~/assets/app/logos/deno.svg";
+import jestLogo from "~/assets/app/logos/Jest.svg";
+import cypressLogo from "~/assets/app/logos/Cypress.svg";
+import nuxtLogo from "~/assets/app/logos/Nuxt.js.svg";
+import expressLogo from "~/assets/app/logos/Express.svg";
+import typescriptLogo from "~/assets/app/logos/TypeScript.svg";
+import ionicLogo from "~/assets/app/logos/Ionic.svg";
+import firebaseLogo from "~/assets/app/logos/Firebase.svg";
+import azureLogo from "~/assets/app/logos/Azure.svg";
+import postgresLogo from "~/assets/app/logos/PostgresSQL.svg";
+import mongoLogo from "~/assets/app/logos/MongoDB.svg";
+import tailwindLogo from "~/assets/app/logos/TailwindCSS.svg";
+import socketioLogo from "~/assets/app/logos/Socket.io.svg";
+import sassLogo from "~/assets/app/logos/Sass.svg";
+import vitestLogo from "~/assets/app/logos/vitest.svg";
+import pythonLogo from "~/assets/app/logos/Python.svg";
+import dockerLogo from "~/assets/app/logos/Docker.svg";
+
 export interface LinkItem {
   link: string;
   logo: string;
 }
 
-export const techItems = [
+export const techItems: LinkItem[] = [
   {
     link: "https://vuejs.org/",
-    logo: new URL("assets/app/logos/Vue.js.svg", import.meta.url).href,
+    logo: vueLogo,
   },
   {
     link: "https://fastify.dev/",
-    logo: new URL("assets/app/logos/Fastify.svg", import.meta.url).href,
+    logo: fastifyLogo,
   },
   {
     link: "https://nodejs.org/en",
-    logo: new URL("assets/app/logos/Node.js.svg", import.meta.url).href,
+    logo: nodeLogo,
   },
   {
     link: "https://deno.com/",
-    logo: new URL("assets/app/logos/deno.svg", import.meta.url).href,
+    logo: denoLogo,
   },
   {
     link: "https://jestjs.io/",
-    logo: new URL("assets/app/logos/Jest.svg", import.meta.url).href,
+    logo: jestLogo,
   },
   {
     link: "https://www.cypress.io/",
-    logo: new URL("assets/app/logos/Cypress.svg", import.meta.url).href,
+    logo: cypressLogo,
   },
   {
     link: "https://nuxt.com/",
-    logo: new URL("assets/app/logos/Nuxt.js.svg", import.meta.url).href,
+    logo: nuxtLogo,
   },
   {
     link: "https://expressjs.com/",
-    logo: new URL("assets/app/logos/Express.svg", import.meta.url).href,
+    logo: expressLogo,
   },
   {
     link: "https://www.typescriptlang.org/",
-    logo: new URL("assets/app/logos/TypeScript.svg", import.meta.url).href,
+    logo: typescriptLogo,
   },
   {
     link: "https://ionicframework.com/",
-    logo: new URL("assets/app/logos/Ionic.svg", import.meta.url).href,
+    logo: ionicLogo,
   },
   {
     link: "https://firebase.google.com/",
-    logo: new URL("assets/app/logos/Firebase.svg", import.meta.url).href,
+    logo: firebaseLogo,
   },
   {
     link: "https://azure.microsoft.com/en-us",
-    logo: new URL("assets/app/logos/Azure.svg", import.meta.url).href,
+    logo: azureLogo,
   },
   {
     link: "https://www.postgresql.org/",
-    logo: new URL("assets/app/logos/PostgresSQL.svg", import.meta.url).href,
+    logo: postgresLogo,
   },
   {
     link: "https://www.mongodb.com/",
-    logo: new URL("assets/app/logos/MongoDB.svg", import.meta.url).href,
+    logo: mongoLogo,
   },
   {
     link: "https://tailwindcss.com/",
-    logo: new URL("assets/app/logos/TailwindCSS.svg", import.meta.url).href,
+    logo: tailwindLogo,
   },
   {
     link: "https://socket.io/",
-    logo: new URL("assets/app/logos/Socket.io.svg", import.meta.url).href,
+    logo: socketioLogo,
   },
   {
     link: "https://sass-lang.com/",
-    logo: new URL("assets/app/logos/Sass.svg", import.meta.url).href,
+    logo: sassLogo,
   },
   {
     link: "https://vitest.dev/",
-    logo: new URL("assets/app/logos/vitest.svg", import.meta.url).href,
+    logo: vitestLogo,
   },
   {
     link: "https://www.python.org/",
-    logo: new URL("assets/app/logos/Python.svg", import.meta.url).href,
+    logo: pythonLogo,
   },
   {
     link: "https://www.docker.com/",
-    logo: new URL("assets/app/logos/Docker.svg", import.meta.url).href,
+    logo: dockerLogo,
   },
-] as LinkItem[];
+];
