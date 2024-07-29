@@ -14,7 +14,8 @@
     "test:ui": "vitest --coverage --ui",
     "test:coverage": "vitest run --coverage",
     "test:watch": "vitest --watch",
-    "clean:tests": "rm -rf coverage html"
+    "clean:tests": "rm -rf coverage html",
+    "static:build" : "nuxi generate && npx serve .output/public"
   },
   "dependencies": {
     "@nuxt/eslint": "^0.3.13",
