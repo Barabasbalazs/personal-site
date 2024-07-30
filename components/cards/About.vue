@@ -1,6 +1,7 @@
 <template>
   <NuxtLayout name="card">
-    <div class="flex flex-col justify-between h-full gap-3">
+    <div class="flex flex-col justify-between h-full gap-3 relative">
+      <OptionsButton />
       <div class="flex flex-col gap-3">
         <h3 class="uppercase">Full Stack Developer</h3>
         <div class="flex text-4xl gap-3">
@@ -22,7 +23,14 @@
 </template>
 
 <script setup lang="ts">
-import { coordinates, description } from "~/constants/about-items";
+import { aboutItem } from "~/constants/about-items";
+
+const { coordinates, description, options } = aboutItem;
+
+provide("options", {
+  optionsValues: options,
+  key: "about",
+});
 
 const gmapQuerry = computed(
   () =>

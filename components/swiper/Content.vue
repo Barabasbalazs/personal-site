@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full">
-    <OptionsButton v-if="project.options" :options="project.options" />
+    <OptionsButton v-if="project.options" />
 
     <div class="flex flex-col justify-between gap-6 h-full">
       <NuxtLink
