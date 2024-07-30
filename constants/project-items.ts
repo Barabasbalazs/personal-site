@@ -9,6 +9,7 @@ export interface OptionsItem {
 }
 
 export interface ProjectItem {
+  key: string;
   title: string;
   subtitle: string;
   description: string;
@@ -19,6 +20,7 @@ export interface ProjectItem {
 
 export const projectItems = [
   {
+    key: "bickleyandmitchell",
     title: "Bickley and Mitchell",
     subtitle: "B2B ecommerce platform",
     description:
@@ -27,6 +29,7 @@ export const projectItems = [
     link: "https://b2b.bickleyandmitchell.com",
   },
   {
+    key: "mapapp",
     title: "Map App",
     subtitle: "Hiking App with real time Tracking",
     description:
@@ -50,6 +53,7 @@ export const projectItems = [
     ] as OptionsItem[],
   },
   {
+    key: "esm-import-modifier",
     title: "esm-import-modifier",
     subtitle: "Deno utility script",
     description:

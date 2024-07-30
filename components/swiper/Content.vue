@@ -42,5 +42,8 @@ const props = defineProps<{
   project: ProjectItem;
 }>();
 
-provide("optionsValues", props?.project?.options);
+provide("options", {
+  optionsValues: props?.project?.options,
+  key: props?.project?.key,
+});
 </script>

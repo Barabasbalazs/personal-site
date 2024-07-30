@@ -11,6 +11,7 @@
       :href="link"
       target="_blank"
       :download="download"
+      @click="emit('close')"
     >
       <p>{{ text }}</p>
     </NuxtLink>
@@ -24,12 +25,15 @@ const emit = defineEmits<{
   (e: "close"): void;
 }>();
 
-const optionsValues = inject("optionsValues") as OptionsItem[];
+const { optionsValues, key } = inject("options") as {
+  optionsValues: OptionsItem[];
+  key: string;
+};
 
 const toolTip = ref(null);
 
 function clickOutsideEvent(event: MouseEvent) {
-  const buttonImg = document.getElementById("three-dots-img");
+  const buttonImg = document.getElementById(`three-dots-img-${key}`);
   if (event.target !== toolTip.value && event.target !== buttonImg)
     emit("close");
 }
