@@ -1,5 +1,7 @@
 <template>
   <div class="relative w-full">
+    <OptionsButton v-if="project.options" :options="project.options" />
+
     <div class="flex flex-col justify-between gap-6 h-full">
       <NuxtLink
         class="flex items-center justify-center w-full h-full"
@@ -36,14 +38,9 @@
 
 <script setup lang="ts">
 import type { ProjectItem } from "~/constants/project-items";
-
-defineProps<{
+const props = defineProps<{
   project: ProjectItem;
 }>();
-</script>
 
-<style scoped>
-.white-underline::before {
-  background-color: #fff !important;
-}
-</style>
+provide("optionsValues", props?.project?.options);
+</script>

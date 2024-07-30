@@ -27,6 +27,10 @@
     transform: scaleX(1);
   }
 
+  .white-underline::before {
+    background-color: #fff !important;
+  }
+
   .left-gradient {
     background: linear-gradient(
       to right,

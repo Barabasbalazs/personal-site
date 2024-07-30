@@ -12,6 +12,7 @@
         src="assets/app/icons/chevron-left.svg"
         alt="chevron-left-icon"
         class="w-10 h-10 md:w-16 md:h-16"
+        loading="eager"
       />
     </button>
     <button
@@ -28,6 +29,7 @@
         src="assets/app/icons/chevron-right.svg"
         alt="chevron-right-icon"
         class="w-10 h-10 md:w-16 md:h-16"
+        loading="eager"
       />
     </button>
 
