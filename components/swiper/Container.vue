@@ -4,7 +4,7 @@
       class="bg-black rounded-2xl absolute left-0 top-1/2 z-10"
       :class="[
         { 'brightness-75 grow': currentIndex > 0 },
-        { 'brightness-50': currentIndex === 0 },
+        { 'brightness-50 opacity-30': currentIndex === 0 },
       ]"
       @click="slideToIndex(currentIndex - 1)"
     >
@@ -21,7 +21,9 @@
         {
           'grow brightness-75': currentIndex < projectItems.length - 1,
         },
-        { 'brightness-50': currentIndex === projectItems.length - 1 },
+        {
+          'brightness-50 opacity-30': currentIndex === projectItems.length - 1,
+        },
       ]"
       @click="slideToIndex(currentIndex + 1)"
     >
