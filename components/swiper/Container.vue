@@ -1,42 +1,13 @@
 <template>
-  <div class="relative w-full wrapper-height">
-    <button
-      class="bg-black rounded-2xl absolute left-0 top-1/2 z-10"
-      :class="[
-        { 'brightness-75 grow': currentIndex > 0 },
-        { 'brightness-50 opacity-30': currentIndex === 0 },
-      ]"
-      @click="slideToIndex(currentIndex - 1)"
-    >
-      <img
-        src="assets/app/icons/chevron-left.svg"
-        alt="chevron-left-icon"
-        class="w-10 h-10 md:w-16 md:h-16"
-        loading="eager"
-      />
-    </button>
-    <button
-      class="bg-black rounded-2xl absolute right-0 top-1/2 z-10"
-      :class="[
-        {
-          'grow brightness-75': currentIndex < projectItems.length - 1,
-        },
-        {
-          'brightness-50 opacity-30': currentIndex === projectItems.length - 1,
-        },
-      ]"
-      @click="slideToIndex(currentIndex + 1)"
-    >
-      <img
-        src="assets/app/icons/chevron-right.svg"
-        alt="chevron-right-icon"
-        class="w-10 h-10 md:w-16 md:h-16"
-        loading="eager"
-      />
-    </button>
-
+  <div ref="wrapper" class="w-full wrapper-height">
     <swiper
       class="w-full h-full"
+      pagination
+      :modules="modules"
+      :autoplay="{
+        delay: 2500,
+        disableOnInteraction: false,
+      }"
       @swiper="onSwiper"
       @slide-change="onSlideChange"
     >
@@ -50,11 +21,20 @@
 //import type Swiper from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
 import { Swiper, SwiperSlide } from "swiper/vue";
+import { Pagination, Autoplay } from "swiper/modules";
 import { projectItems } from "~/constants/project-items";
 
+const modules = [Pagination, Autoplay];
+
+const wrapper = ref();
 const swiperInstance = ref();
 const currentIndex = ref(0);
+
+const bulletWidth = computed(
+  () => `${wrapper.value?.offsetWidth / 2 / projectItems.length}px`,
+);
 
 function onSlideChange(slide: { activeIndex: number }) {
   currentIndex.value = slide.activeIndex;
@@ -63,12 +43,6 @@ function onSlideChange(slide: { activeIndex: number }) {
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 function onSwiper(swiper: any) {
   swiperInstance.value = swiper;
-}
-
-function slideToIndex(index: number) {
-  if (index >= projectItems.length || index < 0) return;
-  currentIndex.value = index;
-  swiperInstance.value.slideTo(index);
 }
 </script>
 <style scoped>
@@ -81,5 +55,21 @@ function slideToIndex(index: number) {
   .wrapper-height {
     height: 100% !important;
   }
+}
+
+.swiper :deep(.swiper-pagination) {
+  bottom: 0;
+}
+
+.swiper :deep(.swiper-pagination .swiper-pagination-bullet) {
+  background: #e4e4e4;
+  width: v-bind(bulletWidth);
+  margin: 9px;
+  border-radius: 20px;
+  height: 6px;
+}
+
+.swiper :deep(.swiper-pagination .swiper-pagination-bullet-active) {
+  background: #98ce00;
 }
 </style>

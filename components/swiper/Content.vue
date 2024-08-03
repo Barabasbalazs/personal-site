@@ -1,6 +1,6 @@
 <template>
   <div class="relative w-full">
-    <div class="flex flex-col justify-between gap-6 h-full">
+    <div class="flex flex-col justify-between gap-6 h-full pb-12">
       <NuxtLink
         class="flex items-center justify-center w-full h-full"
         :to="project.link"
@@ -12,17 +12,20 @@
         <h3 class="uppercase text-lime">
           {{ project.subtitle }}
         </h3>
-        <NuxtLink :to="project.link" target="_blank"
-          ><h2
-            class="font-semibold text-4xl uppercase underline-link white-underline"
-          >
-            {{ project.title }}
-          </h2></NuxtLink
-        >
+
+        <h2 class="font-semibold text-4xl uppercase">
+          {{ project.title }}
+        </h2>
         <p>{{ project.description }}</p>
+        <div v-if="project.options" class="flex gap-2 flex-wrap">
+          <OptionsRedirect
+            v-for="(option, index) in project.options"
+            :key="index"
+            :option="option"
+          />
+        </div>
       </div>
     </div>
-    <!-- <OptionsButton v-if="project.options" /> !-->
   </div>
 </template>
 

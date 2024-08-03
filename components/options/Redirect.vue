@@ -3,6 +3,7 @@
     class="flex text-white underline-link white-underline whitespace-nowrap"
     :to="option.link"
     :download="option.download"
+    target="_blank"
   >
     <p class="uppercase">{{ option.text }}</p>
     <img

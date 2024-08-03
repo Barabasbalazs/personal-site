@@ -2,7 +2,7 @@
   <div class="h-full p-6">
     <div class="flex flex-col gap-10">
       <div class="flex flex-col gap-3">
-        <h3 class="uppercase">Full Stack Developer</h3>
+        <h3 class="uppercase text-lime">Full Stack Developer</h3>
         <div class="flex text-4xl gap-3">
           <h1 class="font-black">Barabás</h1>
           <h1 class="font-semibold">Balázs</h1>
