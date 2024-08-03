@@ -1,7 +1,7 @@
-import cartOutline from "~/assets/app/icons/cart-outline.svg";
-import mapLegend from "~/assets/app/icons/map-legend.svg";
-import denoWhite from "~/assets/app/logos/deno-white.svg";
-import ocr from "~/assets/app/icons/ocr.svg";
+import b2bMockup from "~/assets/app/images/b2b-mockup.png";
+import esmImport from "~/assets/app/images/esm-import.png";
+import mapAppMockup from "~/assets/app/images/map-app-mockup.png";
+import ocrMockUp from "~/assets/app/images/ocr-mockup.png";
 
 export interface OptionsItem {
   text: string;
@@ -26,7 +26,7 @@ export const projectItems = [
     subtitle: "B2B ecommerce platform",
     description:
       "A modern e-commerce platform featuring a custom admin panel and integrated ERP system, designed to enhance the B2B experience for the Amsterdam-based fashion brand, Bickley + Mitchell.",
-    img: cartOutline,
+    img: b2bMockup,
     link: "https://b2b.bickleyandmitchell.com",
   },
   {
@@ -35,7 +35,7 @@ export const projectItems = [
     subtitle: "Handwritten digit classification model",
     description:
       "Optical Character Recognition (OCR) model for converting images of handwritten digits into machine-readable data using k-nearest neighbors (k-NN) and centroid-based classification methods. ",
-    img: ocr,
+    img: ocrMockUp,
     link: "https://github.com/Barabasbalazs/OCR",
     options: [
       {
@@ -50,7 +50,7 @@ export const projectItems = [
     subtitle: "Full Stack app with real time Tracking",
     description:
       "An intuitive web app with real-time tracking, helping tourists and guides explore and navigate both natural landscapes and urban areas with ease and efficiency.",
-    img: mapLegend,
+    img: mapAppMockup,
     link: "https://balazsmap.live",
     options: [
       {
@@ -74,7 +74,7 @@ export const projectItems = [
     subtitle: "Deno utility script",
     description:
       "A powerful utility script that simplifies rewriting ES imports using just a config file. Built in Deno, leveraging an ES syntax module lexer and Worker modules for efficiency.",
-    img: denoWhite,
+    img: esmImport,
     link: "https://github.com/Barabasbalazs/esm-import-modifier",
     options: [
       {

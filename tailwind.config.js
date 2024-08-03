@@ -15,6 +15,7 @@ export default {
       },
       colors: {
         dark: "#1A1A1A",
+        lime: "#98CE00",
       },
     },
   },

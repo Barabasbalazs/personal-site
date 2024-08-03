@@ -1,38 +1,28 @@
 <template>
   <div class="relative w-full">
-    <OptionsButton v-if="project.options" />
-
     <div class="flex flex-col justify-between gap-6 h-full">
       <NuxtLink
         class="flex items-center justify-center w-full h-full"
         :to="project.link"
         target="_blank"
       >
-        <div class="w-1/2">
-          <img
-            class="min-w-1/2"
-            :src="project.img"
-            :alt="project.title"
-            loading="lazy"
-          />
-        </div>
+        <img :src="project.img" :alt="project.title" loading="lazy" />
       </NuxtLink>
-      <div class="bg-dark w-full">
-        <div class="flex flex-col gap-3 w-full">
-          <h3 class="uppercase">
-            {{ project.subtitle }}
-          </h3>
-          <NuxtLink :to="project.link" target="_blank"
-            ><h2
-              class="font-semibold text-4xl uppercase underline-link white-underline"
-            >
-              {{ project.title }}
-            </h2></NuxtLink
+      <div class="flex flex-col gap-3 w-full bottom-0">
+        <h3 class="uppercase text-lime">
+          {{ project.subtitle }}
+        </h3>
+        <NuxtLink :to="project.link" target="_blank"
+          ><h2
+            class="font-semibold text-4xl uppercase underline-link white-underline"
           >
-          <p>{{ project.description }}</p>
-        </div>
+            {{ project.title }}
+          </h2></NuxtLink
+        >
+        <p>{{ project.description }}</p>
       </div>
     </div>
+    <!-- <OptionsButton v-if="project.options" /> !-->
   </div>
 </template>
 
