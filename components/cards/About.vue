@@ -18,12 +18,12 @@
           target="_blank"
           >{{ coordinates.displayValue }}</NuxtLink
         >
-        <div class="flex text-lg gap-6">
+        <div class="flex text-lg gap-6 flex-wrap">
           <p v-for="(language, index) in languages" :key="index">
             {{ language }}
           </p>
         </div>
-        <div class="flex gap-8 text-sm">
+        <div class="flex flex-wrap gap-2 text-sm">
           <OptionsRedirect
             v-for="(option, index) in options"
             :key="index"
@@ -47,6 +47,6 @@ provide("options", {
 
 const gmapQuerry = computed(
   () =>
-    `https://www.google.com/maps/search/?api=1&query=${coordinates?.numericalValue?.lat}%2C+${coordinates?.numericalValue?.lng}`
+    `https://www.google.com/maps/search/?api=1&query=${coordinates?.numericalValue?.lat}%2C+${coordinates?.numericalValue?.lng}`,
 );
 </script>
