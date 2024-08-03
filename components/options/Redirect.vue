@@ -1,6 +1,6 @@
 <template>
   <NuxtLink
-    class="flex text-white underline-link white-underline whitespace-nowrap"
+    class="flex text-white underline-link white-underline whitespace-nowrap items-center"
     :to="option.link"
     :download="option.download"
     target="_blank"
