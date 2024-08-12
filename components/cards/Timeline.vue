@@ -1,5 +1,5 @@
 <template>
-  <NuxtLayout name="card">
+  <NuxtLayout name="card" class="min-h-60">
     <div class="relative h-full w-full flex justify-center">
       <div class="flex items-center justify-center h-full w-full">
         <!--Main line-->

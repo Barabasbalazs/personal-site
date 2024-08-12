@@ -6,7 +6,7 @@
         :to="project.link"
         target="_blank"
       >
-        <img :src="project.img" :alt="project.title" loading="lazy" />
+        <img :src="project.img" :alt="project.title" loading="eager" />
       </NuxtLink>
       <div class="flex flex-col gap-3 w-full bottom-0">
         <h3 class="uppercase text-lime">

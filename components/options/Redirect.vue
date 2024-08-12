@@ -1,6 +1,7 @@
 <template>
   <NuxtLink
     class="flex text-white underline-link white-underline whitespace-nowrap items-center"
+    :class="additionalClass"
     :to="option.link"
     :download="option.download"
     target="_blank"
@@ -19,5 +20,6 @@ import type { OptionsItem } from "~/constants/project-items";
 
 defineProps<{
   option: OptionsItem;
+  additionalClass?: string;
 }>();
 </script>
