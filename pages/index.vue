@@ -1,6 +1,9 @@
 <template>
   <NuxtLayout name="default">
-    <LeftSideWrapper />
-    <CardsProjects />
+    <PageLeftSideWrapper />
+    <CardsProjects class="md:flex hidden" />
+    <CardsMarqueeWrapper class="md:hidden flex" />
+
+    <CardsTimeline class="md:hidden flex" />
   </NuxtLayout>
 </template>

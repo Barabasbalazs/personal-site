@@ -3,7 +3,7 @@
     <NuxtLayout name="cardwrapper" class="w-full h-full" cols>
       <slot
     /></NuxtLayout>
-    <PersonalSection />
-    <ContactFooter />
+    <PagePersonalSection />
+    <PageContactFooter />
   </div>
 </template>
