@@ -5,10 +5,10 @@ interface ExperienceItem {
   item: string;
 }
 
-export const experienceItems = [
+export const experienceItems: ExperienceItem[] = [
   {
     start: 2020,
-    item: "BSc in Finances",
+    item: "&#10003;BSc in Finances",
   },
   {
     start: 2021,
@@ -24,6 +24,6 @@ export const experienceItems = [
   },
   {
     start: 2024,
-    item: "BSc in CS",
+    item: "&#10003;BSc in CS",
   },
-] as ExperienceItem[];
+];

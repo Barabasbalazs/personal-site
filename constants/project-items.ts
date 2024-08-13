@@ -19,7 +19,7 @@ export interface ProjectItem {
   options?: OptionsItem[];
 }
 
-export const projectItems = [
+export const projectItems: ProjectItem[] = [
   {
     key: "bickleyandmitchell",
     title: "Bickley and Mitchell",
@@ -42,7 +42,7 @@ export const projectItems = [
         text: "View source code",
         link: "https://github.com/Barabasbalazs/OCR",
       },
-    ] as OptionsItem[],
+    ],
   },
   {
     key: "mapapp",
@@ -66,7 +66,7 @@ export const projectItems = [
         text: "View BE source code",
         link: "https://github.com/Barabasbalazs/map-app-api",
       },
-    ] as OptionsItem[],
+    ],
   },
   {
     key: "esm-import-modifier",
@@ -81,6 +81,6 @@ export const projectItems = [
         text: "View source code",
         link: "https://github.com/Barabasbalazs/esm-import-modifier",
       },
-    ] as OptionsItem[],
+    ],
   },
-] as ProjectItem[];
+];

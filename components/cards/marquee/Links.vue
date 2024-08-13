@@ -3,28 +3,29 @@
     <div
       v-for="ind in 2"
       :key="ind"
-      class="whitespace-nowrap flex gap-4"
+      class="whitespace-nowrap flex gap-12"
       :class="[
         { 'absolute top-0': ind === 1 },
         `marquee__slider${ind === 1 ? '2' : '1'}`,
       ]"
     >
-      <NuxtLink
+      <div
         v-for="(item, index) in items"
         :id="`link-${index}`"
         :key="index"
-        class="md:w-24 w-16 flex items-center justify-center hover:grayscale-0 grayscale grow p-2"
-        :class="{ 'pr-4': index === items.length - 1 }"
-        :to="item.link"
-        target="_blank"
+        class="md:w-24 w-16 flex items-center grow p-2 flex-col gap-2 hover:grayscale-0 grayscale"
+        :class="{ 'mr-12': index === items.length - 1 }"
       >
+        <p class="text-lime font-semibold text-sm">
+          {{ item.level }}
+        </p>
         <img
-          class="w-full"
+          class="w-full h-full"
           :src="item.logo"
           alt="`logo-${item.link}`"
           loading="lazy"
         />
-      </NuxtLink>
+      </div>
     </div>
     <div
       v-for="ind in 2"
@@ -36,11 +37,11 @@
 </template>
 
 <script setup lang="ts">
-import type { LinkItem } from "~/constants/tech-items";
+import type { TechItem } from "~/constants/tech-items";
 
 interface Props {
   right?: boolean;
-  items: LinkItem[];
+  items: TechItem[];
 }
 
 const props = withDefaults(defineProps<Props>(), { right: true });

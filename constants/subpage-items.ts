@@ -23,7 +23,7 @@ interface SubPage {
     | string;
 }
 
-export const subPages = [
+export const subPages: SubPage[] = [
   {
     title: "About",
     content: CardsMarqueeWrapper,
@@ -39,4 +39,4 @@ export const subPages = [
     content: "ExperienceWrapper",
     id: "experience",
   },
-] as SubPage[];
+];

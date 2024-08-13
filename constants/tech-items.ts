@@ -19,90 +19,111 @@ import vitestLogo from "~/assets/app/logos/vitest.svg";
 import pythonLogo from "~/assets/app/logos/Python.svg";
 import dockerLogo from "~/assets/app/logos/Docker.svg";
 
-export interface LinkItem {
+export interface TechItem {
   link: string;
   logo: string;
+  level: string;
 }
 
-export const techItems: LinkItem[] = [
+export const techItems: TechItem[] = [
   {
     link: "https://vuejs.org/",
     logo: vueLogo,
+    level: "Advanced",
   },
   {
     link: "https://fastify.dev/",
     logo: fastifyLogo,
+    level: "Proficient",
   },
   {
     link: "https://nodejs.org/en",
     logo: nodeLogo,
+    level: "Advanced",
   },
   {
     link: "https://deno.com/",
     logo: denoLogo,
+    level: "Competent",
   },
   {
     link: "https://jestjs.io/",
     logo: jestLogo,
+    level: "Competent",
   },
   {
     link: "https://www.cypress.io/",
     logo: cypressLogo,
+    level: "Competent",
   },
   {
     link: "https://nuxt.com/",
     logo: nuxtLogo,
+    level: "Proficient",
   },
   {
     link: "https://expressjs.com/",
     logo: expressLogo,
+    level: "Advanced",
   },
   {
     link: "https://www.typescriptlang.org/",
     logo: typescriptLogo,
+    level: "Advanced",
   },
   {
     link: "https://ionicframework.com/",
     logo: ionicLogo,
+    level: "Competent",
   },
   {
     link: "https://firebase.google.com/",
     logo: firebaseLogo,
+    level: "Proficient",
   },
   {
     link: "https://azure.microsoft.com/en-us",
     logo: azureLogo,
+    level: "Competent",
   },
   {
     link: "https://www.postgresql.org/",
     logo: postgresLogo,
+    level: "Proficient",
   },
   {
     link: "https://www.mongodb.com/",
     logo: mongoLogo,
+    level: "Proficient",
   },
   {
     link: "https://tailwindcss.com/",
     logo: tailwindLogo,
+    level: "Advanced",
   },
   {
     link: "https://socket.io/",
     logo: socketioLogo,
+    level: "Competent",
   },
   {
     link: "https://sass-lang.com/",
     logo: sassLogo,
+    level: "Proficient",
   },
   {
     link: "https://vitest.dev/",
     logo: vitestLogo,
+    level: "Proficient",
   },
   {
     link: "https://www.python.org/",
     logo: pythonLogo,
+    level: "Competent",
   },
   {
     link: "https://www.docker.com/",
     logo: dockerLogo,
+    level: "Competent",
   },
 ];

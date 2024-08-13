@@ -23,7 +23,8 @@
                   class="absolute bg-white text-dark p-2 border border-dark rounded-3xl text-xs font-semibold lg:whitespace-nowrap text-center min-w-16"
                   :class="[{ mt_34: index % 2 === 0 }, `z-${index * 10}`]"
                 >
-                  <p>{{ item }}</p>
+                  <!--eslint-disable-next-line vue/no-v-html-->
+                  <p v-html="item" />
                 </div>
                 <span
                   class="w-0.5 bg-white"
