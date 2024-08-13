@@ -5,10 +5,12 @@ interface ExperienceItem {
   item: string;
 }
 
+const checkMark = "&#10003;";
+
 export const experienceItems: ExperienceItem[] = [
   {
     start: 2020,
-    item: "&#10003;BSc in Finances",
+    item: `${checkMark}BSc in Finances`,
   },
   {
     start: 2021,
@@ -24,6 +26,6 @@ export const experienceItems: ExperienceItem[] = [
   },
   {
     start: 2024,
-    item: "&#10003;BSc in CS",
+    item: `${checkMark}BSc in CS`,
   },
 ];
