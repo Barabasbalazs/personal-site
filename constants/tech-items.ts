@@ -18,6 +18,8 @@ import sassLogo from "~/assets/app/logos/Sass.svg";
 import vitestLogo from "~/assets/app/logos/vitest.svg";
 import pythonLogo from "~/assets/app/logos/Python.svg";
 import dockerLogo from "~/assets/app/logos/Docker.svg";
+import reactLogo from "~/assets/app/logos/React.svg";
+import honoLogo from "~/assets/app/logos/Hono.svg";
 
 export interface TechItem {
   link: string;
@@ -124,6 +126,16 @@ export const techItems: TechItem[] = [
   {
     link: "https://www.docker.com/",
     logo: dockerLogo,
+    level: "Competent",
+  },
+  {
+    link: "https://react.dev/",
+    logo: reactLogo,
+    level: "Competent",
+  },
+  {
+    link: "https://hono.dev/",
+    logo: honoLogo,
     level: "Competent",
   },
 ];
