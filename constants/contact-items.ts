@@ -7,7 +7,7 @@ export const contactItems: OptionsItem[] = [
   },
   {
     text: "Email",
-    link: "barabas.balazska@gmail.com",
+    link: "mailto:barabas.balazska@gmail.com",
   },
   {
     text: "LinkedIn",

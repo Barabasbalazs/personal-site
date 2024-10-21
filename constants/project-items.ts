@@ -2,6 +2,7 @@ import b2bMockup from "~/assets/app/images/b2b-mockup.png";
 import esmImport from "~/assets/app/images/esm-import.png";
 import mapAppMockup from "~/assets/app/images/map-app-mockup.png";
 import ocrMockUp from "~/assets/app/images/ocr-mockup.png";
+import meiliLogo from "~/assets/app/images/meili-logo.png";
 
 export interface OptionsItem {
   text: string;
@@ -30,6 +31,21 @@ export const projectItems: ProjectItem[] = [
     link: "https://b2b.bickleyandmitchell.com",
   },
   {
+    key: "esm-import-modifier",
+    title: "esm-import-modifier",
+    subtitle: "Deno utility script",
+    description:
+      "A powerful utility script that simplifies rewriting ES imports using just a config file. Built in Deno, leveraging an ES syntax module lexer and Worker modules for efficiency.",
+    img: esmImport,
+    link: "https://github.com/Barabasbalazs/esm-import-modifier",
+    options: [
+      {
+        text: "View source code",
+        link: "https://github.com/Barabasbalazs/esm-import-modifier",
+      },
+    ],
+  },
+  {
     key: "ocr",
     title: "Optical Character Recognition",
     subtitle: "Handwritten digit classification model",
@@ -45,13 +61,22 @@ export const projectItems: ProjectItem[] = [
     ],
   },
   {
+    key: "meilisearch",
+    title: "Meilisearch-js",
+    subtitle: "Search engine client",
+    description:
+      "Open-source JavaScript client for Meilisearch, a flexible and powerful user-focused search engine that can be added to any website or application.",
+    img: meiliLogo,
+    link: "https://github.com/meilisearch/meilisearch-js",
+  },
+  {
     key: "mapapp",
     title: "Map based hiking Application",
     subtitle: "Full Stack app with real time Tracking",
     description:
       "An intuitive web app with real-time tracking, helping tourists and guides explore and navigate both natural landscapes and urban areas with ease and efficiency.",
     img: mapAppMockup,
-    link: "https://balazsmap.live",
+    link: "https://github.com/Barabasbalazs/map-frontend",
     options: [
       {
         text: "Download Thesis as PDF",
@@ -65,21 +90,6 @@ export const projectItems: ProjectItem[] = [
       {
         text: "View BE source code",
         link: "https://github.com/Barabasbalazs/map-app-api",
-      },
-    ],
-  },
-  {
-    key: "esm-import-modifier",
-    title: "esm-import-modifier",
-    subtitle: "Deno utility script",
-    description:
-      "A powerful utility script that simplifies rewriting ES imports using just a config file. Built in Deno, leveraging an ES syntax module lexer and Worker modules for efficiency.",
-    img: esmImport,
-    link: "https://github.com/Barabasbalazs/esm-import-modifier",
-    options: [
-      {
-        text: "View source code",
-        link: "https://github.com/Barabasbalazs/esm-import-modifier",
       },
     ],
   },

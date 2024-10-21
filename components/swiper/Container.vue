@@ -1,5 +1,5 @@
 <template>
-  <div ref="wrapper" class="w-full wrapper-height">
+  <div ref="wrapper" class="w-full wrapper-height h-full">
     <swiper
       class="w-full h-full"
       pagination

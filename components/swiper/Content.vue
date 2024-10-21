@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full">
+  <div class="relative w-full h-full">
     <div class="flex flex-col justify-between gap-6 h-full pb-12">
       <NuxtLink
         class="flex items-center justify-center w-full h-full"
