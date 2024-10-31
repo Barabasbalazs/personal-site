@@ -19,7 +19,7 @@ import vitestLogo from "~/assets/app/logos/vitest.svg";
 import pythonLogo from "~/assets/app/logos/Python.svg";
 import dockerLogo from "~/assets/app/logos/Docker.svg";
 import reactLogo from "~/assets/app/logos/React.svg";
-import honoLogo from "~/assets/app/logos/Hono.svg";
+import springLogo from "~/assets/app/logos/Spring.svg";
 
 export interface TechItem {
   link: string;
@@ -134,8 +134,8 @@ export const techItems: TechItem[] = [
     level: "Competent",
   },
   {
-    link: "https://hono.dev/",
-    logo: honoLogo,
+    link: "https://spring.io/",
+    logo: springLogo,
     level: "Competent",
   },
 ];
