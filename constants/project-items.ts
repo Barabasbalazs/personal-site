@@ -62,12 +62,22 @@ export const projectItems: ProjectItem[] = [
   },
   {
     key: "meilisearch",
-    title: "Meilisearch-js",
+    title: "Meilisearch-js/java",
     subtitle: "Search engine client",
     description:
-      "Open-source JavaScript client for Meilisearch, a flexible and powerful user-focused search engine that can be added to any website or application.",
+      "Open-source JavaScript and Java client for Meilisearch, a flexible and powerful user-focused search engine that can be added to any website or application.",
     img: meiliLogo,
-    link: "https://github.com/meilisearch/meilisearch-js",
+    link: "https://github.com/meilisearch",
+    options: [
+      {
+        text: "View JS source code",
+        link: "https://github.com/meilisearch/meilisearch-js",
+      },
+      {
+        text: "View Java source code",
+        link: "https://github.com/meilisearch/meilisearch-java",
+      },
+    ],
   },
   {
     key: "mapapp",
