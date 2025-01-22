@@ -1,4 +1,4 @@
-export const years = <const>[2020, 2021, 2022, 2023, 2024, 2025];
+export const years = <const>[2020, 2021, 2022, 2023, 2024, 2025, 2026];
 
 interface ExperienceItem {
   start: (typeof years)[number];
@@ -27,5 +27,9 @@ export const experienceItems: ExperienceItem[] = [
   {
     start: 2024,
     item: `${checkMark}BSc in CS`,
+  },
+  {
+    start: 2025,
+    item: `Dev @ efsta`,
   },
 ];
